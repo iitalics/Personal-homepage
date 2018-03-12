@@ -70,9 +70,9 @@
   (define-simple-macro (entries {~seq name val} ...)
     (cons 'p (append* `([(strong name) ": " val (br)] ...))))
   #:page
-  ,(entries "Phone" "(808) 280 0766"
-            "Email" "milo (at) ccs.neu.edu"
-            "Location" "Boston, MA (Northeastern University)"))
+  ,(entries "Phone"       "(808) 280 0766"
+            "Email"      "milo (at) ccs.neu.edu"
+            "Location"   "Boston, MA (Northeastern University)"))
 
 ;; -------------------------------
 ;; projects
@@ -116,11 +116,16 @@
   (define-project lucid "Lucid" (git-url "caseyz" "lucid") #:left
     #:lang "C++"
     (define org (a "https://orgmode.org/" "Org mode for Emacs"))
-
     @p{ @,this is an experimental version control system, similar to Git and Darcs. It uses
         "patch commutation" as a mathematical basis for merge and cherry-pick
         operations. It also has a text-based frontend designed to integrate with @,(org
         "org-mode") within the editor Emacs. })
+
+  (define-project home "This Website" (git-url "iitalics" "Personal-homepage") #:right
+    #:lang "Racket, SASS, JS"
+    @p{ This page is built using SASS to generate CSS, and Racket to generate HTML from
+        s-expressions. I try to make everything open-source, so feel free to check out how
+        this very site works! })
 
   #:page
   @h2{Projects}
@@ -128,6 +133,7 @@
   @,opal
   @h2{Works in Progress}
   @,lucid
+  @,home
   )
 
 ;; -------------------------------------------------------------
