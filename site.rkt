@@ -68,10 +68,10 @@
 
 (define-nav contact "Contact"
   (define-simple-macro (entries {~seq name val} ...)
-    (cons 'p (append* `([(strong name) ": " val (br)] ...))))
+    (cons 'p (append* `([(strong ,name) ": " ,val (br)] ...))))
   #:page
-  ,(entries "Phone"       "(808) 280 0766"
-            "Email"      "milo (at) ccs.neu.edu"
+  ,(entries "Phone"      "(808) 280 0766"
+            "Email"      "milo@ccs.neu.edu"
             "Location"   "Boston, MA (Northeastern University)"))
 
 ;; -------------------------------
@@ -79,7 +79,7 @@
 
 (define-nav projs "Projects"
   (define-simple-macro (define-project x name url
-                         {~or {~and #:left {~parse left? #'#t}}
+                         {~or {~and #:left  {~parse left? #'#t}}
                               {~and #:right {~parse left? #'#f}}}
                          {~optional {~seq #:lang lang} ; TODO: insert language nexto
                                                        ; to project title
