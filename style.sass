@@ -1,0 +1,136 @@
+
+/* fonts */
+
+body
+  font-family: 'Roboto', sans-serif
+
+.container
+  h1, h2
+    cursor: default
+    font-family: 'Work Sans', sans-serif
+
+
+/* colors */
+
+.container
+  nav
+    a
+      transition: background 0.1s, color 0.1s
+      background: #ccc
+      color: #111
+    a.cur
+      background: #999
+    a:hover
+      color: #fff
+      background: #137
+    a.ext:hover
+      background: #27c
+
+  article
+    h2
+      color: #333
+      border-bottom: 1px dotted #777
+
+    p
+      a
+        color: #03f
+        text-decoration: none
+      a:hover
+        color: #08b
+        text-decoration: underline
+
+.project
+  border: 1px solid #eee
+  a.title
+    font-family: 'Work-Sans', sans-serif
+    color: #000
+    text-decoration: none
+  a.title:hover
+    color: #222
+    text-decoration: underline
+  .icon
+    transition: background-color 0.3s
+
+.icon-nanocaml
+  background-color: #0c4
+.icon-nanocaml:hover
+  // background-color: #5f4
+  background-color: #2e4
+
+.icon-opal
+  background-color: #49f
+.icon-opal:hover
+  background-color: #6cf
+
+.icon-lucid
+  background-color: #c25
+.icon-lucid:hover
+  background-color: #f25
+
+/* geometry */
+
+$body_w: 700px
+
+body
+  padding: 0
+  margin: 0
+
+.container
+  margin-left: auto
+  margin-right: auto
+  margin-top: 3rem
+  width: $body_w
+  @media (max-width:$body_w)
+    width: 100%
+
+  #dance
+    height: 60px
+    left: 50%
+    position: absolute
+    .line
+      position: absolute
+
+  h1
+    margin: 0
+    font-size: 3.5rem
+
+  nav
+    display: flex
+    a
+      width: 100%
+      text-decoration: none
+      box-sizing: border-box
+      text-align: center
+      padding: 2px
+
+  article
+    font-size: 1.2rem
+
+    p
+      margin: 0.9em 0
+      padding: 0 0.9em
+      text-align: justify
+
+    h2
+      font-size: 1.4em
+
+  .project
+    display: flex
+    flex-flow: row
+    margin-bottom: 1em
+    .icon
+      display: block
+      width: 110px
+    .content
+      margin: 0.3rem
+
+    .title
+      font-size: 1.3em
+      display: block
+      margin: 0
+    .title-right
+      text-align: right
+
+    p
+      margin: 0
+      font-size: 0.9rem
