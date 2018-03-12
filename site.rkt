@@ -57,8 +57,8 @@
       useful functional ideas. The spirit of Lisp lives on! }
 
   @p{ As much as I love functions, I have a soft-spot for low-level hacking in C and also
-      @,(forth "Forth"). I'm grateful to have worked with Mitch Bradley, who taught me a lot about
-      Forth, but more generally about also about @,(taste "taste"): what it means for a
+      @,(forth "Forth"). I'm grateful to have worked under Mitch Bradley, who taught me a
+      lot about Forth, but more generally about @,(taste "taste"): what it means for a
       design to be simple, small, and elegant. }
 
 )
@@ -81,7 +81,8 @@
   (define-simple-macro (define-project x name url
                          {~or {~and #:left {~parse left? #'#t}}
                               {~and #:right {~parse left? #'#f}}}
-                         {~optional {~seq #:lang lang}
+                         {~optional {~seq #:lang lang} ; TODO: insert language nexto
+                                                       ; to project title
                                     #:defaults ([lang ""])}
                          pre-body ... xexpr)
     #:with this (format-id #'x "this")
