@@ -19,7 +19,7 @@
   "https://fonts.googleapis.com/css?family=Roboto|Work+Sans")
 
 (define CV-PATH
-  "resume-milo-turner.pdf")
+  "resumeMiloTurner.pdf")
 
 (define LINKEDIN-URL
   "https://www.linkedin.com/in/milo-turner-0741a8120/")
@@ -53,13 +53,13 @@
   @h2{Musings}
 
   @p{ As a proponent of functional programming, I enjoy programming in OCaml, and hacking
-      on @,(rakt "Racket"). I'm glad that more common languages like C++ and Java have adopted many
-      useful functional ideas. The spirit of Lisp lives on! }
+      on @,(rakt "Racket"). I'm glad that more commonly used languages like C++ and Java
+      have adopted many useful functional ideas. The spirit of Lisp lives on!  }
 
   @p{ As much as I love functions, I have a soft-spot for low-level hacking in C and also
-      @,(forth "Forth"). I'm grateful to have worked under Mitch Bradley, who taught me a
-      lot about Forth, but more generally about @,(taste "taste"): what it means for a
-      design to be simple, small, and elegant. }
+      @,(forth "Forth"). I'm grateful to have been mentored by Mitch Bradley, the founder
+      of Open Firmware. He taught me a lot about Forth, but more generally about @,(taste
+      "taste"): what it means for a design to be simple, small, and elegant. }
 
 )
 
@@ -144,7 +144,7 @@
 (define-nav +linkedin "LinkedIn" #:ext-link LINKEDIN-URL)
 
 (parameterize
-    ([current-nav     (list index contact cv projs +github +linkedin)]
+    ([current-nav     (list index cv projs +github +linkedin contact)]
      [current-scripts (list "dance.js")]
      [current-css     (list GOOGLE-FONTS-URL "style.css")]
      [current-output-dir "www"])
